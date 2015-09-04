@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Wysiwyg Title</title>
+    <meta charset="utf-8">
+</head>
+<body><div id="flow-container">
+    <img class="ui-droppable" height="166" hotareas="114_6_4_19_39_59;114_6_4_19_41_26" last-src="../wysiwyg/images/img1.JPG" src="../wysiwyg/images/img1.JPG" style="padding:0px;margin:0px;" usemap="#60f4ff81-c12c-b93b-60e0-69201c365dfb" width="169" />sd<img class="ui-droppable" height="158" last-src="../wysiwyg/images/img1.JPG" src="../wysiwyg/images/img1.JPG" style="padding:0px;margin:0px;left:460px;top:84.90625px;position:absolute;" width="186" />
+</div><div id="abso-container">
+    <map name="60f4ff81-c12c-b93b-60e0-69201c365dfb"><area shape="rect" coords="49.5,2.1875,163.5,103.1875" href="http://www.baidu.com" alt="" id="114_6_4_19_39_59"><area shape="circle" coords="134,130.5,35" href="http://www.google.com.hk" alt="" id="114_6_4_19_41_26"></map>
+</div></body>
+</html>

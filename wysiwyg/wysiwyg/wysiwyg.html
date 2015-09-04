@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WYSIWYG</title>
+    <meta charset="utf-8">
+    <link href="../3thlib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="../3thlib/kendoui/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />-->
+    <link href="../3thlib/kendoui/styles/kendo.silver.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../3thlib/kendoui/styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="../3thlib/kendoui/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <script src="../3thlib/kendoui/js/jquery.min.js"></script>
+    <script src="../3thlib/kendoui/js/kendo.all.min.js"></script>
+    <script src="../3thlib/svg_todataurl.js"></script>
+
+    <!-- use jQueryUI for Interactions -->
+    <link id="ui-themes-switch" type="text/css"
+          href="../3thlib/jquery-ui-1.10.4.custom(Interactions)/css/jquery-ui-1.10.4.custom(zxl).css" rel="stylesheet">
+    <script src="../3thlib/jquery-ui-1.10.4.custom(Interactions)/js/jquery-ui-1.10.4.custom(zxl).js"></script>
+    <link href="./lib/css/wysiwyg.css" rel="stylesheet" type="text/css"/>
+
+    <!-- use rangy for search and replace -->
+    <script type="text/javascript" src="../3thlib/rangy/rangy-core.js"></script>
+    <script type="text/javascript" src="../3thlib/rangy/rangy-highlighter.js"></script>
+    <script type="text/javascript" src="../3thlib/rangy/rangy-selectionsaverestore.js"></script>
+    <script type="text/javascript" src="../3thlib/rangy/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../3thlib/rangy/rangy-textrange.js"></script>
+    <script src="./lib/js/searchReplace.js"></script>
+
+    <!-- <script src="../3thlib/htmlparser/htmlparser.js"></script> -->
+</head>
+
+<body>
+
+<div id="splitter" style="height: 100%; border: 0;">
+
+    <div id="center-pane" style="overflow:visible;">
+        <div class="pane-content" style="height: 100%;position:relative;">
+            <div id="inner-splitter" style="height: 100%;">
+                <div id="top-pane"  style="overflow: visible;">
+                    <div id="toolbar" style="max-height: 100%;">
+                    </div>
+                    <div id="design-panel" style="position:relative;margin-top: 18px;margin-left: 18px;">
+                        <div id="ruler-top"></div>
+                        <div id="ruler-left"></div>
+                        <div id="ruler-origin"></div>
+                        <div id="editor-panel" style="overflow: auto;position:absolute;">
+							<div id="default-editor" contenteditable="true" style="position:absolute;word-wrap: normal;padding: 0; border: 0;border-radius: 0px;"></div>
+                        </div>
+						<div id="abso-container"></div>
+                    </div>
+                </div>
+                <div id="bottom-pane" style="overflow: hidden;">
+                    <textarea id="code-panel" style="width:100%;height:99.9%;resize: none;margin:0px;padding:0px;border:none;"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="right-pane" style="height: 100%;overflow: hidden;">
+        <div class="pane-content" style="height: 100%;">
+            <div id="tabstrip"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="./lib/js/EditorProxy.js"></script>
+<script src="./lib/js/objManager.js"></script>
+<script src="./lib/js/designPanel.js"></script>
+<script src="./lib/js/Initialize.js"></script>
+<script src="./lib/js/InitializeRightPane.js"></script>
+<script src="./lib/js/InitializePopups.js"></script>
+<script src="./lib/js/main.js"></script>
+
+</body>
+</html>
