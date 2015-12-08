@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    -khtml-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    font-family: microsoft yahei;
+}
+*:after,
+*:before{
+    display: table;
+    overflow: hidden;
+    clear: both;
+    content: '';
+}
+h1,h2,h3,h4,h5,h6{}
+ul,li{ list-style: none; }
+body,html{
+    overflow-x: hidden;
+    font-size: 62.5%;
+    font-family: microsoft yahei;
+}
+.mheader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3.8rem;
+    width: 100vw;
+    line-height: 3.8rem;
+    /*
+    -khtml-box-shadow: 0 .1rem .2rem #8A8989;
+    -webkit-box-shadow: 0 .1rem .2rem #8A8989;
+    -moz-box-shadow: 0 .1rem .2rem #8A8989;
+    -ms-box-shadow: 0 .1rem .2rem #8A8989;
+    -o-box-shadow: 0 .1rem .2rem #8A8989;
+    box-shadow: 0 .1rem .2rem #8A8989;
+    background-image: -moz-linear-gradient(left, #8194AA, #A7C0DC, #A7C0DC, #8194AA);
+    background-image: -webkit-linear-gradient(left, #8194AA, #A7C0DC, #A7C0DC, #8194AA);
+    background-image: -o-linear-gradient(left, #8194AA, #A7C0DC, #A7C0DC, #8194AA);
+    background-image: -ms-linear-gradient(left, #8194AA, #A7C0DC, #A7C0DC, #8194AA);
+    background-image: -khtml-linear-gradient(left, #8194AA, #A7C0DC, #A7C0DC, #8194AA);
+    */
+}
+.mbody{
+    position: absolute;
+    top: 3.8rem;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.contextmenu{
+    position: absolute;
+    width: 17.5rem;
+    background-image: url(../images/sys-bg.png);
+    background-repeat: repeat-y;
+    background-position: 0 0;
+    -khtml-box-shadow: 0 0 2.5rem #ADAAAA;
+    -webkit-box-shadow: 0 0 2.5rem #ADAAAA;
+    -ms-box-shadow: 0 0 2.5rem #ADAAAA;
+    -o-box-shadow: 0 0 2.5rem #ADAAAA;
+    -moz-box-shadow: 0 0 2.5rem #ADAAAA;
+    box-shadow: 0 0 2.5rem #ADAAAA;
+    -khtml-border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+    border-radius: .6rem;
+}
+.contextmenu ul li{
+    font-size: 1.2rem;
+    height: 2.6rem;
+    line-height: 2.5rem;
+    position: relative;
+}
+.contextmenu ul > li{ position: relative; }
+.contextmenu ul li .span,
+.contextmenu ul li label{ display: block; float: left; }
+.contextmenu ul li .span,
+.contextmenu ul li .spanRight{ height: 2.4rem; width: 2.4rem; }
+.contextmenu ul li .spanRight{ float: right; }
+.contextmenu ul li .labelcontent{ width: 15.1rem; padding-left: 0.8rem; float: right; }
+.contextmenu ul li .labelcontent span{ display: inline-block; }
+
+.contextmenu ul li:hover{ 
+    -khtml-box-shadow: 0 0 .8rem #bbb inset; 
+    -webkit-box-shadow: 0 0 .8rem #bbb inset; 
+    -moz-box-shadow: 0 0 .8rem #bbb inset; 
+    -ms-box-shadow: 0 0 .8rem #bbb inset; 
+    -o-box-shadow: 0 0 .8rem #bbb inset; 
+    box-shadow: 0 0 .8rem #bbb inset; 
+    -khtml-border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    border-radius: .3rem;
+}
+.cmenu-innerul{
+   width: 17.5rem;
+   background-image: url(../images/sys-bg.png);
+   background-repeat: repeat-y;
+   background-position: 0 0;
+   position: absolute;
+   top: 0;
+   right: -17.2rem;
+   -khtml-box-shadow: 0 0 2.5rem #ADAAAA;
+   -webkit-box-shadow: 0 0 2.5rem #ADAAAA;
+   -ms-box-shadow: 0 0 2.5rem #ADAAAA;
+   -o-box-shadow: 0 0 2.5rem #ADAAAA;
+   -moz-box-shadow: 0 0 2.5rem #ADAAAA;
+   box-shadow: 0 0 2.5rem #ADAAAA;
+   display: none;
+   z-index: 99;
+}
+.contextmenu ul li:hover .cmenu-innerul{ display: block; }
+.contextmenu ul .diliverbtm{
+    border-bottom: .1rem solid #FFF;
+}
+.contextmenu ul .dilivertop{
+    border-top: 1px solid #E4E3E3;
+}
+
+
+
+/*****桌面资源管理样式*****/
+.deskIcon-layout{
+    min-width: 32.5rem;
+}
+.deskIcon-layout .deskIcon{
+    display: inline-block;
+    padding: .5rem 0 1rem 0;
+    -khtml-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    border-radius: .3rem;
+}
+.deskIcon-layout .deskIcon:hover{
+    background-color: rgba(255,255,255,.5);
+}

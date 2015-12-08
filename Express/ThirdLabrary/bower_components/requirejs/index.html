@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jquery-1.11.3/index.js"></script>
+    <script src="require.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(function() {
+            ({
+                init: function() {
+                    var _this = this;
+                    require(['app'], function( app ) {
+                         _this.initLoaded( app );
+                    });
+                },
+                initLoaded: function( app ) {
+                     var isBoolean = app.bDirect();
+                         console.dir(isBoolean);
+                }
+            }).init();
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

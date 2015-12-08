@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mac and Windows complex</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="thirdLibary/jquery/index.js"></script>
+    <script src="thirdLibary/requirejs/require.js"></script>
+    <script src="main.js"></script>
+    <style>
+        .btn{
+            height: 42px;
+            line-height: 42px;
+            font-family: "microsoft yahei";
+            font-size: 18px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 0 5px #ccc;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        .iframe-layout{
+            width: 700px;
+            height: 367px;
+            overflow: auto;
+            border: 1px solid #dedede;
+            position: relative;
+        }
+        .loading{
+            font-family: microsoft yahei;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 360px;
+            height: 42px;
+            margin-top: -21px;
+            margin-left: -180px;
+            line-height: 42px;
+            text-align: center;
+            font-weight: normal;
+            color: #666;
+        }
+        #myIframe{ display: none; }
+    </style>
+    <!--<script>
+        require(['func/alertFunc', 'layout/layoutHeader'], function( alertFunc, layoutHeader ) {
+                layoutHeader.layout.init();
+        });
+    </script>-->
+</head>
+<body>
+    <div class="iframe-layout">
+        <h1 class="loading">数据正在加载中,请耐心等待....</h1>
+        <iframe scrolling="no" id="myIframe" style="width: 700px;height: 600px;" src="http://www.sse.com.cn/market/price/kline/index.shtml?code=SH000001&radiobutton=&keyword=SH000001"></iframe>
+    </div>
+    <!--
+    <div class="mheader"></div>
+    <div class="mbody">
+      <div class="deskIcon-layout">
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_02.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_03.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_04.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_05.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_08.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_09.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_10.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_11.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_13.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_14.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_15.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_16.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_18.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_19.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_20.png" class="deskIcon" />
+            <img src="images/%E6%9C%AA%E6%A0%87%E9%A2%98-1_21.png" class="deskIcon" />
+        </div>-->
+
+        <!--<input type="button" value="ToggleBtn" class="btn" />
+        <div class="contextmenu" id="contextmenu">
+            <ul class="cmenu-ul" id="cmenu-ul">
+
+                <li class="cmenu-li">
+                    <span class="span"></span>
+                    <label class="labelcontent"><span class="spancontent" id="orderStyle">排序方式</span>(O)<span class="span spanRight spanDot"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span"></span>
+                    <label class="labelcontent diliverbtm"><span class="spancontent" id="refresh">刷新</span>(E)<span class="span spanRight spanDot"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span"></span>
+                    <label class="labelcontent dilivertop"><span class="spancontent" id="paste">粘贴</span>(P)<span class="span spanRight"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span"></span>
+                    <label class="labelcontent diliverbtm"><span class="spancontent" id="pasteQuick">粘贴快捷方式</span>(S)<span class="span spanRight"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span"></span>
+                    <label class="labelcontent dilivertop"><span id="back">撤消</span>&nbsp;<span id="delete">删除</span>(U)<span class="span spanRight spanDot"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span"></span>
+                    <label class="labelcontent diliverbtm"><span class="spancontent" id="news">新建</span>(W)<span class="span spanRight spanDot"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span span-pixicon"></span>
+                    <label class="labelcontent dilivertop"><span class="spancontent" id="pix">屏幕分辨率</span>(C)<span class="span spanRight"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span span-toolicon"></span>
+                    <label class="labelcontent"><span class="spancontent" id="tools">小工具</span>(G)<span class="span spanRight"></span></label>
+                    </li>
+                <li class="cmenu-li">
+                    <span class="span span-specicon"></span>
+                    <label class="labelcontent"><span class="spancontent" id="toolssex">个性化</span>(R)<span class="span spanRight"></span></label>
+                    </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="mfooter"></div>-->
+
+    <script>
+        $(function() {
+            $('#myIframe').css({
+                width: screen.width,
+                height: screen.height
+            });
+            var i = 6;
+            setInterval(function() {
+                $('.loading').html('数据正在加载中,请耐心等待(<span style="display: inline-block;color: #F00">&nbsp;' + i + '&nbsp;</span>)....');
+                i--;
+                if( i == 0) { i = 6; }
+            }, 1000);
+            var myIframe = document.getElementById('myIframe');
+
+                myIframe.onload = function() {
+                   setTimeout(function() {
+                       $('.loading').fadeOut(800);
+                       $('#myIframe').fadeIn(800);
+                       $('.iframe-layout').scrollTop(270).scrollLeft(670).css({
+                           overflow: 'hidden'
+                       });
+
+                   }, 6000)
+
+                }
+
+
+        });
+        /*$().ready(function() {
+            var btn = document.querySelector('#btn');
+
+            var reg = /-([\da-z])/gi;
+            var temp, originTemp;
+
+
+                console.log( originTemp.toString( 2 ) );
+                console.log( temp.toString( 2 ) );
+
+        });*/
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

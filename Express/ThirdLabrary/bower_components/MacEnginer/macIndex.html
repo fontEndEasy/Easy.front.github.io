@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body{ padding: 0; margin: 0; }
+        .dragPanel{ position: absolute; }
+        .dragPanel{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #DEDEDE;
+            background-color: #ffa500;
+        }
+    </style>
+</head>
+<body>
+
+<div id="dragPanel" class="dragPanel"></div>
+
+<script>
+   /* var _r_function = /^function\b *([$\w\u00FF-\uFFFF]+) *\(/m;
+    var showIt = function( func ) {
+        var name = (!(func instanceof  Function) ? 'unknow type' :
+            _r_function.test(func.toString()) ? RegExp.$1 :
+            'anonymous');
+        console.log('->' + name);
+    }*/
+    /*var rg, str;
+
+        rg = /^function\b *([$\w]+) *\(/m;
+
+        function func_02() {}
+        str = func_02.toString();
+        console.log( str );
+        console.log( rg.test( str ) );*/
+    /*function MyFunc() {
+
+        var data_1,data_2;
+            data_1 = 123;
+            data_2 = new Array();
+        return {
+            getData_1: function func_1() {
+                return data_1;
+            },
+            getData_2: function func_2() {
+                return data_2;
+            }
+        }
+
+    }
+    var myFunc = new MyFunc();
+        myFunc.getData_1();
+        myFunc.getData_2();
+
+
+    function MyObject() {*/
+        /******实例方法******/
+      /*  this.init = function() {}
+        this.myMethod = function() {
+
+        }
+    }*/
+
+    /******原型方法，供实例共享******/
+    /*MyObject.prototype.proMethod1 = function() {}
+    MyObject.prototype.proMethod2 = function() {}
+
+    MyObject.prototype.proMethod = function() {};
+    var obj1 = new MyObject();
+    var obj2 = new MyObject();
+    console.log( obj1.proMethod === obj2.proMethod );
+
+
+    function MyObject() {
+        var instance_data = 150;
+        this.getInstanceData = function() {
+            return instance_data;
+        }
+        this.setInstanceData = function( v ) {
+            instance_data = v;
+        }
+    }
+    */
+
+   /*function MyObject() {
+       var instanceData = 100;
+       this.getInstanceData = function() {
+           console.log( this );
+           return instanceData;
+       }
+       this.setInstanceData = function( v ) {
+           instanceData = v;
+       }
+   }
+   (function() {
+
+        var class_data = 5;
+        this.getClassData = function() {
+            console.log(this);
+            return class_data;
+        }
+        this.setClassData = function( v ) {
+            class_data = v;
+        }
+    }).call(MyObject.prototype);
+    var myobj = new MyObject();
+        console.log( myobj.getClassData() );
+*/
+
+
+   /*
+    var obj = {
+        initX: 0,
+        initY: 1,
+        offmX: 0,
+        offmY: 1,
+        temp: 0,
+        dragPanel: null,
+        init: function( elem ) {
+            var _this;
+                _this = this;
+                this.dragPanel = document.querySelector( ('#' || '.') + elem );
+                this.dragPanel.addEventListener('mousedown', function( e ){
+                    _this.initX = e.offsetX;
+                    _this.initY = e.offsetY;
+                    _this.offmX = this.style.left;
+                    _this.offmY = this.style.top;
+                    _this.temp = !0;
+
+                    _this.docMoveHandlerListener.call(_this, null);
+                });
+
+        },
+        docMoveHandlerListener: function() {
+            var _this;
+                _this = this;
+
+                document.addEventListener('mousemove', function( e ) {
+                    if(_this.temp) {
+                        _this.dragPanel.style.left = (e.clientX - _this.initX) + 'px';
+                        _this.dragPanel.style.top = (e.clientY - _this.initY) + 'px';
+                        _this.dragPanel.style.cursor = 'pointer';
+                    }
+
+                });
+
+            this.docMouseUpHandlerListener.call(this, null);
+
+        },
+        docMouseUpHandlerListener: function() {
+            var _this;
+                _this = this;
+            document.addEventListener('mouseup', function( e ) {
+                _this.temp = 0;
+
+                var findElem;
+                if(_this.dragPanel.offsetLeft < -100) {
+                    var _clone = _this.dragPanel.previousSibling.previousSibling.cloneNode(true);
+                    document.body.removeChild(_this.dragPanel.previousSibling.previousSibling);
+                    document.body.appendChild(_clone);
+                }else if(_this.dragPanel.offsetLeft > 100){
+                    findElem = _this.dragPanel.nextSibling;
+
+                    while(findElem.nodeType != 1 || findElem.tagName.toLowerCase() != 'div') {
+                        findElem = findElem.nextSibling;
+                    }
+                    console.log(findElem);
+                    var _cloneNode = findElem.cloneNode(true);
+                    document.body.removeChild(findElem);
+                    document.body.insertBefore(_cloneNode, _this.dragPanel);
+                }
+                _this.dragPanel.style.position = 'static';
+                if(_this.dragPanel.offsetLeft < 250) {
+                    _this.dragPanel.style.left = '200px';
+                }
+
+                _this.dragPanel.style.cursor = 'default';
+            })
+        }
+    }
+    obj.init( 'dragPanel' );
+
+    */
+
+    /*function aFunc() {
+        function MyFunc() {
+
+        }
+        return MyFunc;
+    }
+    var f1 = aFunc();
+    var f2 = aFunc();
+
+
+   function WrapperFunc() {
+
+   }
+   var f3 = WrapperFunc;
+   var f4 = WrapperFunc;
+    console.log( f1 == f2 );
+    console.log( f3 === f4 );*/
+
+
+
+    /*
+    var getValue = function() {
+        function MyObject() {
+
+        }
+
+        return function() {
+
+            return MyObject;
+        }
+    }()
+
+    var a = getValue();
+    var b = getValue();
+    console.log( a === b );
+    */
+
+</script>
+</body>
+</html>

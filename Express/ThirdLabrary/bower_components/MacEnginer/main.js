@@ -1,0 +1,6 @@
+require.config({
+    baseUrl:'./',
+    paths: {
+
+    }
+})
