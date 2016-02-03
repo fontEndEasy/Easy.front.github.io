@@ -26,3 +26,5 @@
 详细的法律条文请参见[创意共享](http://creativecommons.org/licenses/by-nc/4.0/)网站。
 
 原文作者：阮一峰，地址：https://github.com/ruanyf/es6tutorial
+
+博客地址：http://www.ruanyifeng.com/blog/2014/04/ecmascript_6_primer.html
