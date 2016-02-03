@@ -24,3 +24,4 @@
 只要保持原作者署名和非商用，您可以自由地阅读、分享、修改本书。
 
 详细的法律条文请参见[创意共享](http://creativecommons.org/licenses/by-nc/4.0/)网站。
+原文作者：阮一峰，地址：https://github.com/ruanyf/es6tutorial
